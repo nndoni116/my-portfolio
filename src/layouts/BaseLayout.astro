@@ -1,6 +1,6 @@
 ---
 // src/layouts/BaseLayout.astro
-import '../styles/global.css'; // ★ここで最新のCSSを読み込む
+import "../styles/global.css"; // ★ここで最新のCSSを読み込む
 
 interface Props {
   title: string;
@@ -8,7 +8,11 @@ interface Props {
   image?: string;
 }
 
-const { title, description = 'Web制作ポートフォリオ', image = 'https://my-portfolio-4s2.pages.dev/images/ogp.png' } = Astro.props;
+const {
+  title,
+  description = "Web制作ポートフォリオ",
+  image = "https://my-portfolio-4s2.pages.dev/images/ogp.png",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -21,13 +25,19 @@ const { title, description = 'Web制作ポートフォリオ', image = 'https://
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:image" content={image} />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
   <body class="bg-brand-light text-brand-dark antialiased">
-    <slot /> </body>
+    <slot />
+  </body>
 </html>
