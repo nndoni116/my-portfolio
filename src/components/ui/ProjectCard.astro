@@ -5,16 +5,14 @@ interface Props {
   description: string;
   thumbnail: string;
   techStack: string[];
-  linkUrl: string; // ★プロップス（データ）を追加
+  detailsUrl: string;
 }
 
-const { title, description, thumbnail, techStack, linkUrl } = Astro.props;
+const { title, description, thumbnail, techStack, detailsUrl } = Astro.props;
 ---
 
 <a 
-  href={linkUrl} 
-  target="_blank" 
-  rel="noopener noreferrer" 
+  href={detailsUrl} 
   class="group relative flex flex-col justify-between overflow-hidden border border-brand-dark/10 p-6 bg-white/40 backdrop-blur-sm hover:border-brand-accent transition-all duration-500 block cursor-pointer"
 >
   <div>

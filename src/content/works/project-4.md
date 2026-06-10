@@ -5,5 +5,5 @@ description: "個人事業で作成した建設・運送会社のホームペー
 thumbnail: "/images/jyochi.png"
 techStack: ["Astro", "Tailwind CSS"]
 sortOrder: 4
-linkUrl: "https://jyochi.co.jp/"
+projectUrl: "https://jyochi.co.jp/"
 ---

@@ -20,7 +20,7 @@ const sortedWorks = allWorks.sort((a, b) => a.data.sortOrder - b.data.sortOrder)
         description={work.data.description}
         thumbnail={work.data.thumbnail}
         techStack={work.data.techStack}
-        linkUrl={work.data.linkUrl}
+        detailsUrl={`/works/${work.id}/`}
       />
     ))}
   </div>

@@ -5,5 +5,5 @@ description: "訓練の個人課題で作成した、ハード系パン屋のサ
 thumbnail: "/images/hardpan.png"
 techStack: ["HTML", "CSS", "Javascript"]
 sortOrder: 1
-linkUrl: "https://bakery.hardpan.workers.dev/"
+projectUrl: "https://bakery.hardpan.workers.dev/"
 ---

@@ -7,5 +7,5 @@ description: |
 thumbnail: "/images/customecsite.png"
 techStack: ["Astro", "Tailwind CSS", "Hono"]
 sortOrder: 2
-linkUrl: "https://custom-ec-site.pages.dev/"
+projectUrl: "https://custom-ec-site.pages.dev/"
 ---

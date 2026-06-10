@@ -11,7 +11,7 @@ const worksCollection = defineCollection({
     thumbnail: z.string(),
     techStack: z.array(z.string()),
     sortOrder: z.number(),
-    linkUrl: z.string().url(),
+    projectUrl: z.string().url(),
   }),
 });
 
