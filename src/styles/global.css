@@ -4,7 +4,7 @@
   /* 高級感を演出するカスタムカラーの定義 */
   --color-brand-dark: #0b0b0b;       /* 完全な黒ではない、深い墨色 */
   --color-brand-light: #fbfbfa;      /* わずかに温かみのあるオフホワイト */
-  --color-brand-accent: #c5a880;     /* 上品なゴールド・真鍮色（アクセント用） */
+  --color-brand-accent: #9d6e2f;     /* 濃いゴールド・真鍮色（アクセント用） */
 
   /* 高級感を演出するタイポグラフィの定義（Google Fonts等と連携） */
   --font-serif: "Noto Serif JP", serif;
