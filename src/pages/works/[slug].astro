@@ -16,7 +16,9 @@ export async function getStaticPaths() {
 }
 
 const { work } = Astro.props as { work: Work };
-const { title, description, thumbnail, techStack, projectUrl } = work.data;
+const { title, description, thumbnail, techStack, projectUrl, details = '', impressions = '' } = work.data;
+const detailsText = details || 'このプロジェクトでは、ユーザー視点を意識したデザインと操作性を重視し、実際のサイト制作に近い形で構築しました。';
+const impressionsText = impressions || '実装を通じてUI設計やレスポンシブ対応の理解が深まり、今後もさらに成長していきたいと強く感じました。';
 ---
 
 <BaseLayout title={`${title} | Portfolio`}>
@@ -48,7 +50,7 @@ const { title, description, thumbnail, techStack, projectUrl } = work.data;
           <p class="whitespace-pre-line text-base font-sans font-light opacity-80 leading-loose mb-10">{description}</p>
 
           <div class="mb-10">
-            <h2 class="text-xs font-sans tracking-[0.25em] uppercase opacity-50 mb-4">Technology</h2>
+            <h2 class="text-xs font-sans tracking-[0.25em] uppercase opacity-50 mb-4">主な使用技術</h2>
             <div class="flex flex-wrap gap-2">
               {techStack.map((tech) => (
                 <span class="text-xs font-sans tracking-wider border border-brand-dark/20 px-3 py-2 opacity-70">
@@ -67,8 +69,24 @@ const { title, description, thumbnail, techStack, projectUrl } = work.data;
             Visit Site
             <span aria-hidden="true">&rarr;</span>
           </a>
+          </div>
         </div>
       </div>
+      <div class="mt-12 space-y-30">
+            <div>
+              <h2 class="text-lg font-bold tracking-[0.25em] uppercase opacity-80 mb-4">＜サイト詳細＞</h2>
+              <p class="whitespace-pre-line text-base font-sans font-light opacity-80 leading-loose">
+                {detailsText}
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-lg font-bold tracking-[0.25em] uppercase opacity-80 mb-4">＜制作の感想＞</h2>
+              <p class="whitespace-pre-line text-base font-sans font-light opacity-80 leading-loose">
+                {impressionsText}
+              </p>
+            </div>
+          </div>
     </article>
   </main>
 
