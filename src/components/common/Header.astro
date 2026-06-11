@@ -2,14 +2,43 @@
 // src/components/common/Header.astro
 ---
 
-<header class="fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-16 md:py-5 flex justify-between items-center ">
+<header class="fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-16 md:py-5 flex justify-between items-center bg-brand-light/95 backdrop-blur-sm shadow-sm">
   <a href="/#hero" class="flex items-center gap-4">
     <img src="/images/header-logo.png" alt="Logo" class="h-10 w-auto">
-    <span class="font-bold tracking-widest text-sm md:text-lg  text-brand-dark">PORTFOLIO</span>
+    <span class="font-bold tracking-widest text-sm md:text-lg text-brand-dark hover:text-brand-accent transition-colors">PORTFOLIO</span>
   </a>
-  <nav class="flex gap-8 text-sm font-bold tracking-[0.2em] uppercase text-brand-dark">
-    <a href="/#works" class="hover:text-brand-accent transition-colors">Works</a>
-    <a href="/#about" class="hover:text-brand-accent transition-colors">About</a>
-    <a href="/#outro" class="hover:text-brand-accent transition-colors">Outro</a>
+  <button id="nav-toggle" type="button" class="md:hidden inline-flex flex-col items-center justify-center gap-1 rounded-md p-2 text-brand-dark hover:text-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-accent" aria-controls="site-navigation" aria-expanded="false">
+    <span class="sr-only">メニューを開く</span>
+    <span aria-hidden="true" class="block w-6 h-0.5 bg-current"></span>
+    <span aria-hidden="true" class="block w-6 h-0.5 bg-current"></span>
+    <span aria-hidden="true" class="block w-6 h-0.5 bg-current"></span>
+  </button>
+  <!--spではハンバーガーボタンを表示させる　md:hiddenでsp以外は表示させない -->
+  <nav id="site-navigation" class="hidden absolute left-0 right-0 top-full mt-2 bg-brand-light/95 border-t border-brand-dark/10 py-4 shadow-md backdrop-blur-sm md:static md:block md:border-none md:bg-transparent md:shadow-none md:py-0">
+    <!-- hiddenでspでは隠す　md:でsp以外は表示させる -->
+    <div class="flex flex-col items-center gap-4 text-sm font-bold tracking-[0.2em] uppercase text-brand-dark md:flex-row md:gap-8">
+      <a href="/#works" class="hover:text-brand-accent transition-colors">Works</a>
+      <a href="/#about" class="hover:text-brand-accent transition-colors">About</a>
+      <a href="/#outro" class="hover:text-brand-accent transition-colors">Outro</a>
+    </div>
   </nav>
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('nav-toggle');
+      const nav = document.getElementById('site-navigation');
+      if (!toggle || !nav) return;
+      //ハンバーガーボタンかナビどちらか一つでもなければ、実行しないようしている
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        //メニューが開いていればaria-expandedはtrueなので定数expandedはtrue(真になる)
+        //メニューが閉じていればaria-expandedはfalseなので定数expandedはfalse(偽になる)
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        //clickした際にもしexpandedがtrue(メニューが開いている)なら!expandedでexpandedを反転させてfalseをセットして閉じる
+        //clickした際にもしexpandedがflase(メニューが閉じている)なら!expandedでexpandedを反転させてtrueをセットして開く
+        nav.classList.toggle('hidden');
+        //もしメニューが開いていたらhiddenをつけてメニューを隠す
+        //もしメニューが閉じていたらhiddenを外してメニューを表示させる
+      });
+    });
+  </script>
 </header>
