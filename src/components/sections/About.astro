@@ -2,36 +2,60 @@
 // src/components/sections/About.astro
 ---
 
-<div class="max-w-6xl mx-auto px-6 py-24 md:px-12 md:py-32 border-t border-brand-dark/10">
+<div
+  class="max-w-6xl mx-auto px-6 py-24 md:px-12 md:py-32 border-t border-brand-dark/10"
+>
   <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-    
     <div class="md:col-span-4">
-      <span class="text-xs font-sans tracking-[0.3em] uppercase opacity-50 block mb-3">02 / Identity</span>
-      <h2 class="text-3xl md:text-5xl font-serif font-light tracking-wide">About Me</h2>
+      <span
+        class="text-xs font-sans tracking-[0.3em] uppercase opacity-50 block mb-3"
+        >01 / Identity</span
+      >
+      <h2 class="text-3xl md:text-5xl font-serif font-light tracking-wide">
+        About Me
+      </h2>
     </div>
 
-    <div class="md:col-span-8 space-y-8 font-sans font-light leading-relaxed text-sm md:text-base opacity-90">
-      <p class="text-lg font-serif font-normal text-brand-dark">
-        「堅牢なアーキテクチャと圧倒的なパフォーマンスで、持続可能な価値を創る」
-      </p>
-      <p>
-        モダンテックを専門とするフルスタックエンジニア。AstroやReact、Tailwind CSSによる爆速なフロントエンド実装から、Hono、Cloudflare Workers/D1、各種CMSを用いたバックエンド・データ設計までを一気通貫で行います。
-      </p>
-      <p>
-        単に見栄えの良い画面を作るだけでなく、PlaywrightによるE2Eテストの導入やGitHub ActionsによるCI/CD構築など、運用のしやすさと保守性を徹底的に意識し、実案件の現場でビジネスに寄与する高品質な成果物を提供します。
-      </p>
-      
-      <div class="pt-8 border-t border-brand-dark/10 grid grid-cols-2 gap-6">
-        <div>
-          <h4 class="font-medium tracking-wider uppercase text-xs mb-3 text-brand-accent">Front-End & UI</h4>
-          <p class="text-sm opacity-80">Astro, React, TypeScript, Tailwind CSS, Figma, WordPress</p>
-        </div>
-        <div>
-          <h4 class="font-medium tracking-wider uppercase text-xs mb-3 text-brand-accent">Back-End & Devops</h4>
-          <p class="text-sm opacity-80">Hono, Cloudflare Workers, D1, PHP, GitHub Actions, Playwright</p>
-        </div>
+    <div
+      class="md:col-span-8 space-y-9 font-sans font-light leading-relaxed text-sm md:text-base opacity-90"
+    >
+      <div class="space-y-3">
+        <p class="opacity-70">＜名前＞</p>
+        <p class="text-4xl font-serif font-normal text-brand-dark">武田 直樹</p>
+      </div>
+      <div class="space-y-3">
+        <p class="opacity-70">＜保有スキル＞</p>
+        <ul class="space-y-4 list-none p-0">
+          <li class="space-y-1">
+            <p class="font-semibold">フロントエンド</p>
+            <p>
+              Html / CSS / Tailwind CSS / JavaScript / TypeScript / Astro /
+              WordPress
+            </p>
+          </li>
+          <li class="space-y-1">
+            <p class="font-semibold">バックエンド</p>
+            <p>PHP / MySQL</p>
+          </li>
+          <li class="space-y-1">
+            <p class="font-semibold">インフラ・ツール</p>
+            <p>GitHub / Cloudflare Pages / microCMS</p>
+          </li>
+          <li class="space-y-1">
+            <p class="font-semibold">テスト・品質保証</p>
+            <p>Playwright</p>
+          </li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <p class="opacity-70">＜自己PR＞</p>
+        <p>
+          私の強みは、新しい技術を自発的に学び、実務を見据えて形にする行動力です。
+          職業訓練校で基礎を学ぶ傍ら、実務経験のある訓練仲間と個人事業を立ち上げ、実際の案件を通じてモダン技術の習得に励んできました。
+          具体的には、AstroやTypeScript、Cloudflareを用いたサイト制作を実践し、画面の実装だけでなく、保守性の高い設計やデプロイ環境の整備など、一連の開発フローを経験しました。
+          現場を知る仲間から刺激を受けつつ、常に実務レベルの品質と効率を意識して、仕様検討から公開まで主体的に取り組む姿勢を大切にしています。
+        </p>
       </div>
     </div>
-
   </div>
 </div>
