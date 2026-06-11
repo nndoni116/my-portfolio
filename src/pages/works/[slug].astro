@@ -17,6 +17,8 @@ export async function getStaticPaths() {
 
 const { work } = Astro.props as { work: Work };
 const { title, description, thumbnail, techStack, projectUrl, details = '', impressions = '' } = work.data;
+// 表示用タイトル：連続する空白を改行に変換して表示する
+const titleForDisplay = title.replace(/\s{2,}/g, '\n');
 const detailsText = details || 'このプロジェクトでは、ユーザー視点を意識したデザインと操作性を重視し、実際のサイト制作に近い形で構築しました。';
 const impressionsText = impressions || '実装を通じてUI設計やレスポンシブ対応の理解が深まり、今後もさらに成長していきたいと強く感じました。';
 ---
@@ -45,7 +47,7 @@ const impressionsText = impressions || '実装を通じてUI設計やレスポ�
 
         <div>
           <span class="text-xs font-sans tracking-[0.3em] uppercase opacity-50 block mb-4">Project Detail</span>
-          <h1 class="text-3xl md:text-5xl font-serif font-light tracking-wide leading-tight mb-8">{title}</h1>
+          <h1 class="text-3xl md:text-5xl font-serif font-light tracking-wide leading-tight mb-8 whitespace-pre-line">{titleForDisplay}</h1>
 
           <p class="whitespace-pre-line text-base font-sans font-light opacity-80 leading-loose mb-10">{description}</p>
 
