@@ -6,7 +6,7 @@ description: "職業訓練のグループ課題で作成したカスタムECサ�
 #         訓練のグループ課題で作成したカスタムECサイト 
 #         WebサイトやDX商材をサイトその場で、ヒアリングしてカスタムできる。
 thumbnail: "/images/customecsite.png"
-techStack: ["Astro", "Preact", "Tailwind CSS", "Hono", "Cloudflare","Zod", "Vitest", "Playwright"]
+techStack: ["Astro", "Tailwind CSS", "Hono", "Cloudflare", "Vitest", "Playwright"]
 sortOrder: 2
 projectUrl: "https://custom-ec-site.pages.dev/"
 details: |

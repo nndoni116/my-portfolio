@@ -3,7 +3,7 @@
 title: "建設・運送会社のサイト   jyochi"
 description: "個人事業で作成した建設・運送会社のホームページ"
 thumbnail: "/images/jyochi.png"
-techStack: ["Astro", "Tailwind CSS", "HONO", "Cloudflare", "microCMS", "Resend", "Zod", "Vitest", "Playwright", "Docker Compose", "GitHub Actions", "pnpn Workspaces"]
+techStack: ["Astro", "Tailwind CSS", "HONO", "Cloudflare", "microCMS", "Resend", "Vitest", "Playwright"]
 sortOrder: 4
 projectUrl: "https://jyochi.co.jp/"
 details: |
